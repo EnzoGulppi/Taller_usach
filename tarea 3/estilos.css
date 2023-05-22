@@ -1,0 +1,123 @@
+.layout{
+    display: grid;
+    /*grid-template-columns: 200px; no es recomendable ocuparlo con pixeles*/
+    grid-template-columns: 1fr ; /*Divide la pagina de forma igual
+    aun que podemos editar la proporcion*/
+    grid-template-rows: 12% 1fr 3fr 1fr ;
+    height: calc(100vh - 16px); 
+}
+@media screen and (min-width: 600px ){/*Para todas las pantallas-> desde 768px*/
+    .layout{
+        grid-template-columns: 1fr 2fr ;
+        color: rgb(157, 26, 26);
+    }
+    .layout_header{
+        display: flex;
+        grid-column: 1 / span 2;/*como se divide en columnas, 
+        ocupamos para ocupar toda la pagina->comienza en 1 y termina en 2*/
+        background-color: rgb(0, 155, 75); 
+        align-items: center;
+        justify-content: space-around;        
+    }
+    .li_header{
+        list-style-type: none;
+        display:inline-block ; 
+        
+    }
+    .a_header{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        text-decoration: none;
+        justify-content: end;
+        padding: 5px 20px; 
+        
+    }  
+    .a_header:hover{
+        color: rgb(255, 255, 255);
+    } 
+    .layout_nav{
+        grid-column: 1 / 3;/*como se divide en columnas, 
+        ocupamos para ocupar toda la pagina->comienza en 1 y termina en inicio 3*/
+        background-color:rgb(5, 184, 23) ;    
+    }
+    .texto_nav{
+        color: #070606;
+        font-size: 20px;
+        font: oblique bold 120% cursive;
+        text-align: center;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    
+    .layout_aside{
+        grid-column: 2 / span 2;
+    }
+    .layout_main{
+        display: block;
+        grid-column: 1 / 2;
+        grid-row: 3/4;
+        
+    }
+    .texto_main{
+        color: rgb(109, 78, 31);
+        font: oblique bold 160% cursive;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .layout_footer{
+        grid-column: 1 / span 2;
+        padding: 15px 30px;
+        background-color:#7d7573 ;
+        display: flex; 
+        justify-content: center;
+        font-weight: bold; 
+    }
+    .footer_1{
+        display: flex;   
+    }
+    .footer-col{
+        padding: 5px 25px;
+    }
+    .footer-col ul li{
+        justify-content: space-between;
+        list-style-type: none;
+    }
+    .footer-col ul li a{
+        color: rgb(255, 230, 196);
+        display: block;
+        font-family:  Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 5px;
+    }
+    .footer-col ul li a:hover{
+        padding-left: 10px;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1368px ){
+    
+}
+
+/*
+.layout_aside{
+    grid-column: 2 / span 2;
+}
+.layout_footer{
+    grid-column: 1 / span 2;
+}
+.layout_header{
+    grid-column: 1 / span 2;/*como se divide en columnas, 
+    ocupamos para ocupar toda la pagina->comienza en 1 y termina en 2
+}
+.layout_main{
+    grid-column: 1 / 2;
+    grid-row: 3/4;
+}
+.layout_nav{
+    grid-column: 1 / 3;/*como se divide en columnas, 
+    ocupamos para ocupar toda la pagina->comienza en 1 y termina en inicio 3
+}*/

@@ -1,0 +1,29 @@
+.header{
+    margin: 30px;
+}
+.banda{
+	display: block;
+    position: relative;
+}
+.banda h1{
+    font-size: 70px;
+    font-family:Georgia, Times, serif;
+    text-align: center;
+}
+.banda p{
+    text-align: center;
+    color: cadetblue;
+}
+.contenedorCartas {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(70, 240, 27);
+}
+.card {
+    width: 200px;
+    margin: 15px;
+    color: rgb(155, 17, 102);  
+}
+  
